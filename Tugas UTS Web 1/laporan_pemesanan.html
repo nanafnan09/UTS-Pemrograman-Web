@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laporan Pemesanan</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="logo">TokoBuku.id</div>
+      <nav class="main-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="stok.html">Katalog</a>
+        <a href="checkout.html">Pemesanan</a>
+        <a href="tracking.html">Tracking</a>
+        <a href="histori_transaksi.html">Histori Transaksi</a>
+        <a href="index.html" class="btn-logout">Logout</a>
+      </nav>
+    </header>
+
+    <main class="content-wrapper">
+      <section id="laporan-pemesanan">
+        <h2>Laporan Pemesanan Bulanan</h2>
+
+        <p>
+          Ringkasan data pesanan yang masuk dan yang sudah diproses pada bulan
+          ini.
+        </p>
+
+        <div class="card" style="margin-top: 20px; padding: 15px">
+          <div class="form-group" style="display: flex; gap: 10px">
+            <input type="month" value="2025-11" />
+            <button
+              class="btn primary-btn"
+              onclick="alert('Simulasi: Melakukan filter data.')"
+            >
+              Filter
+            </button>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>No. DO</th>
+                <th>Tanggal Pesan</th>
+                <th>Nama Pemesan</th>
+                <th>Total Bayar</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>20230012</td>
+                <td>2025-11-01</td>
+                <td>Rina Wulandari</td>
+                <td>Rp 180.000</td>
+                <td>Dalam Proses</td>
+              </tr>
+              <tr>
+                <td>20230013</td>
+                <td>2025-11-01</td>
+                <td>Agus Pranoto</td>
+                <td>Rp 220.000</td>
+                <td>Selesai</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Toko Buku Online UTS Web1</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

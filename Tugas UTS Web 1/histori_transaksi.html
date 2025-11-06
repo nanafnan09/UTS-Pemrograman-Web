@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Histori Transaksi</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="logo">TokoBuku.id</div>
+      <nav class="main-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="stok.html">Katalog</a>
+        <a href="checkout.html">Pemesanan</a>
+        <a href="tracking.html">Tracking</a>
+        <a href="laporan_pemesanan.html">Laporan Pemesanan</a>
+        <a href="index.html" class="btn-logout">Logout</a>
+      </nav>
+    </header>
+
+    <main class="content-wrapper">
+      <section id="histori-transaksi">
+        <h2>Riwayat Pembelian Selesai</h2>
+
+        <p>Daftar transaksi yang telah berhasil diselesaikan dan dikirimkan.</p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID Transaksi</th>
+                <th>Tanggal Selesai</th>
+                <th>Barang Dibeli</th>
+                <th>Jumlah Item</th>
+                <th>Total Pembayaran</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TX-202511001</td>
+                <td>2025-11-05</td>
+                <td>Manajemen Keuangan</td>
+                <td>1</td>
+                <td>Rp 220.000</td>
+                <td>
+                  <button
+                    class="btn secondary-btn"
+                    onclick="alert('Mencetak struk untuk TX-202511001')"
+                  >
+                    Cetak Struk
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>TX-202510098</td>
+                <td>2025-10-28</td>
+                <td>Mikrobiologi Dasar</td>
+                <td>2</td>
+                <td>Rp 400.000</td>
+                <td>
+                  <button
+                    class="btn secondary-btn"
+                    onclick="alert('Mencetak struk untuk TX-202510098')"
+                  >
+                    Cetak Struk
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Toko Buku Online UTS Web1</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

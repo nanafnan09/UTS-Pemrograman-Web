@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Pemesanan</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <nav class="main-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="stok.html">Katalog</a>
+        <a href="tracking.html">Tracking</a>
+      </nav>
+    </header>
+
+    <main class="content-wrapper">
+      <section id="data-pemesan">
+        <h2>Data Pemesan & Pembayaran</h2>
+        <form id="formPemesanan">
+          <fieldset>
+            <legend>Informasi Pemesan</legend>
+            <div class="form-group">
+              <label for="nama">Nama Lengkap:</label
+              ><input type="text" id="nama" required />
+            </div>
+            <div class="form-group">
+              <label for="alamat">Alamat Kirim:</label
+              ><textarea id="alamat" required></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Informasi Pembayaran</legend>
+            <div class="form-group">
+              <label for="metode">Metode Pembayaran:</label>
+              <select id="metode" required>
+                <option value="">Pilih Metode</option>
+                <option value="transfer">Transfer Bank</option>
+                <option value="virtual">Virtual Account</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn primary-btn">
+            Selesaikan Pemesanan
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Toko Buku Online UTS Web1</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

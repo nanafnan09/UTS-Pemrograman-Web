@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Toko Buku UTS</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="login-page">
+    <main class="login-container">
+      <header>
+        <h1>Toko Buku Literaria</h1>
+        <p>Silakan masuk untuk melanjutkan.</p>
+      </header>
+
+      <form id="formLogin">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            required
+            placeholder="Contoh: rina@gmail.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            required
+            placeholder="Password Anda"
+          />
+        </div>
+
+        <button type="submit" class="btn primary-btn">Login</button>
+      </form>
+
+      <div class="login-links">
+        <button class="link-btn" onclick="tampilkanModal('modalLupaPassword')">
+          Lupa Password?
+        </button>
+        <button class="link-btn" onclick="tampilkanModal('modalDaftar')">
+          Daftar
+        </button>
+      </div>
+    </main>
+
+    <div id="modalLupaPassword" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="sembunyikanModal('modalLupaPassword')"
+          >&times;</span
+        >
+        <h3>Lupa Password</h3>
+        <p>Silakan hubungi admin di 08xx-xxxx-xxxx untuk reset password.</p>
+      </div>
+    </div>
+
+    <div id="modalDaftar" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="sembunyikanModal('modalDaftar')"
+          >&times;</span
+        >
+        <h3>Daftar Akun Baru</h3>
+        <p>
+          Fitur registrasi sedang dalam pengembangan. Gunakan akun dummy yang
+          tersedia.
+        </p>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracking Pengiriman</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <nav class="main-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="stok.html">Katalog</a>
+        <a href="checkout.html">Pemesanan</a>
+      </nav>
+    </header>
+
+    <main class="content-wrapper">
+      <section id="pencarian-tracking">
+        <h2>Lacak Pengiriman Anda</h2>
+        <form id="formTracking">
+          <div class="form-group search-group">
+            <label for="nomor-do">Nomor Delivery Order:</label>
+            <input
+              type="text"
+              id="nomor-do"
+              placeholder="Cth: 20230012"
+              required
+            />
+            <button type="submit" class="btn primary-btn">Cari</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="hasil-tracking" class="card" style="display: none">
+        <h3>Status Pengiriman</h3>
+
+        <dl class="tracking-details">
+          <dt>Nama Pemesan:</dt>
+          <dd id="track-nama"></dd>
+          <dt>Ekspedisi:</dt>
+          <dd id="track-ekspedisi"></dd>
+          <dt>Tanggal Kirim:</dt>
+          <dd id="track-tgl-kirim"></dd>
+          <dt>Jenis Paket:</dt>
+          <dd id="track-paket"></dd>
+          <dt>Total Pembayaran:</dt>
+          <dd id="track-total"></dd>
+        </dl>
+
+        <h4>
+          Status Saat Ini: <span id="track-status" class="status-label"></span>
+        </h4>
+
+        <div class="progress-container">
+          <div id="progress-bar" class="progress-bar-style"></div>
+        </div>
+
+        <h4>Riwayat Perjalanan</h4>
+        <ul id="riwayat-perjalanan" class="timeline-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Toko Buku Online UTS Web1</p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
