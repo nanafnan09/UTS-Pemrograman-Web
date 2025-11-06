@@ -1015,6 +1015,357 @@ tampilkanModal(id): Mengubah properti display elemen HTML dengan id tertentu men
 sembunyikanModal(id): Mengubah properti display elemen HTML dengan id tertentu menjadi "none", menyembunyikannya.
 
 
+# CSS
+
+```css
+/* Palet Warna: 
+    Krem Muda: #FDFDFD (Background)
+    Biru Tua: #1D3557 (Teks Utama/Header)
+    Hijau Hutan: #457B9D (Aksen/Judul)
+    Emas Lembut: #FFB703 (Button/Greeting Pagi)
+*/
+:root {
+  --color-primary: #1d3557;
+  --color-secondary: #457b9d;
+  --color-accent: #ffb703;
+  --color-background: #fdfdfd;
+  --color-light: #f4f4f4;
+}
+
+/* Base Styles & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lora", serif;
+  color: var(--color-secondary);
+  margin-bottom: 15px;
+}
+
+/* Navigation & Header */
+.app-header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: var(--color-accent);
+}
+
+.btn-logout {
+  background-color: #e63946; /* Merah Anggur */
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* General Layout & Buttons */
+.content-wrapper {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.primary-btn {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.primary-btn:hover {
+  background-color: #e0a700;
+}
+
+.secondary-btn {
+  background: none;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.secondary-btn:hover {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+/* Forms, Inputs, & Form Validation */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Login Page Specific */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-light);
+}
+
+.login-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--color-secondary);
+  cursor: pointer;
+  margin-top: 10px;
+  text-decoration: underline;
+  display: block;
+}
+
+/* Modal Box Styles (Pop-up) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: var(--color-background);
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: var(--color-primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Dashboard Styles (Memperbaiki tampilan) */
+.dashboard-content {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+#user-greeting {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-light);
+}
+
+.greeting-pagi {
+  color: var(--color-accent);
+  font-style: italic;
+}
+.greeting-siang {
+  color: var(--color-primary);
+  font-weight: bold;
+}
+.greeting-sore {
+  color: #e63946;
+}
+.greeting-malam {
+  color: var(--color-secondary);
+}
+
+.info-boxes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 250px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Katalog Table Styles */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+}
+
+.cover-thumb {
+  width: 50px;
+  height: auto;
+  border-radius: 3px;
+  display: block;
+}
+
+.stok-rendah {
+  color: #e63946;
+  font-weight: bold;
+}
+
+/* Tracking Progress Bar (Kreativitas) */
+.progress-container {
+  background-color: var(--color-light);
+  border-radius: 5px;
+  height: 25px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.progress-bar-style {
+  height: 100%;
+  width: 0%;
+  transition: width 0.6s ease-in-out, background-color 0.6s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  color: white;
+  font-size: 0.9em;
+}
+
+.tracking-details {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.timeline-list {
+  list-style: none;
+  padding-left: 0;
+  border-left: 2px solid var(--color-secondary);
+  padding-left: 20px;
+}
+
+.timeline-list li {
+  position: relative;
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.timeline-list li:before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 15px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  border: 3px solid var(--color-background);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  color: #aaa;
+  margin-top: 40px;
+  border-top: 1px solid var(--color-light);
+}
+
+```
+
 
 
 
